@@ -15,7 +15,7 @@ export async function run(provider: NetworkProvider) {
     codeCell
   );
   const openContract = provider.open(myContract);
-  openContract.sendDeploy(provider.sender(), toNano("0.01"));
+  openContract.sendDeploy(provider.sender(), toNano("0.05"));
 
   await provider.waitForDeploy(myContract.address);
 }
